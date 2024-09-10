@@ -15,7 +15,7 @@ int main()
     int number = 0b1010; // in dezimal = 10
     int position = 2;
     bitset<4> bin_number(number);   // Zahl in binär umwandeln
-    bitset<4> bin_position(position);    
+    bitset<4> bin_position(position);
     
     cout << "original number: 0b" << bin_number << endl;
     // Setze das Bit an Position 3
