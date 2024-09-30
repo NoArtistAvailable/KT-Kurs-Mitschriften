@@ -9,6 +9,9 @@ public:
 	std::string contact;
 
 	std::string memberNumber;
+	// beginne mit großen Initialen,
+	// 4 Ziffern: zufällig
+	// Prüfziffer
 
 	std::vector<Media*> rented;
 

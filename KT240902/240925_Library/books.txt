@@ -1,0 +1,87 @@
+Der Herr der Ringe; J.R.R. Tolkien; Fantasy; 978-3-16-148410-0
+1984; George Orwell; Dystopie; 978-0-452-28423-4
+Die Verwandlung; Franz Kafka; Klassik; 978-3-596-90456-1
+Harry Potter und der Stein der Weisen; J.K. Rowling; Fantasy; 978-3-551-55451-0
+Der Alchemist; Paulo Coelho; Abenteuer; 978-0-06-112241-5
+To Kill a Mockingbird; Harper Lee; Klassik; 978-0-06-112008-4
+Pride and Prejudice; Jane Austen; Romantik; 978-0-19-953556-9
+The Great Gatsby; F. Scott Fitzgerald; Klassik; 978-0-7432-7356-5
+Moby Dick; Herman Melville; Abenteuer; 978-0-14-243724-7
+War and Peace; Leo Tolstoy; Historisch; 978-0-14-044793-4
+Crime and Punishment; Fyodor Dostoevsky; Krimi; 978-0-14-305814-4
+The Catcher in the Rye; J.D. Salinger; Klassik; 978-0-316-76948-0
+The Hobbit; J.R.R. Tolkien; Fantasy; 978-0-618-00221-3
+Brave New World; Aldous Huxley; Dystopie; 978-0-06-085052-4
+The Odyssey; Homer; Episch; 978-0-14-026886-7
+The Iliad; Homer; Episch; 978-0-14-027536-0
+Jane Eyre; Charlotte Brontë; Romantik; 978-0-14-144114-6
+Wuthering Heights; Emily Brontë; Romantik; 978-0-14-143955-6
+The Divine Comedy; Dante Alighieri; Episch; 978-0-14-044895-5
+Les Misérables; Victor Hugo; Historisch; 978-0-14-044430-8
+The Brothers Karamazov; Fyodor Dostoevsky; Klassik; 978-0-14-044924-2
+Anna Karenina; Leo Tolstoy; Romantik; 978-0-14-303500-8
+Madame Bovary; Gustave Flaubert; Romantik; 978-0-14-044912-9
+The Count of Monte Cristo; Alexandre Dumas; Abenteuer; 978-0-14-044926-6
+Great Expectations; Charles Dickens; Klassik; 978-0-14-143956-3
+David Copperfield; Charles Dickens; Klassik; 978-0-14-043944-1
+Frankenstein; Mary Shelley; Horror; 978-0-14-143947-1
+Dracula; Bram Stoker; Horror; 978-0-14-143984-6
+The Picture of Dorian Gray; Oscar Wilde; Klassik; 978-0-14-143957-0
+The Metamorphosis; Franz Kafka; Klassik; 978-0-14-310524-4
+The Stranger; Albert Camus; Philosophie; 978-0-14-118250-6
+One Hundred Years of Solitude; Gabriel Garcia Marquez; Magischer Realismus; 978-0-06-088328-7
+Love in the Time of Cholera; Gabriel Garcia Marquez; Romantik; 978-0-14-012389-0
+Don Quixote; Miguel de Cervantes; Abenteuer; 978-0-14-243723-0
+The Old Man and the Sea; Ernest Hemingway; Klassik; 978-0-684-80122-3
+A Farewell to Arms; Ernest Hemingway; Historisch; 978-0-684-80146-9
+For Whom the Bell Tolls; Ernest Hemingway; Historisch; 978-0-684-80147-6
+The Sun Also Rises; Ernest Hemingway; Klassik; 978-0-684-80148-3
+The Grapes of Wrath; John Steinbeck; Historisch; 978-0-14-303943-3
+Of Mice and Men; John Steinbeck; Klassik; 978-0-14-017739-8
+East of Eden; John Steinbeck; Klassik; 978-0-14-200423-4
+The Pearl; John Steinbeck; Klassik; 978-0-14-017737-4
+The Scarlet Letter; Nathaniel Hawthorne; Klassik; 978-0-14-243726-1
+The Adventures of Huckleberry Finn; Mark Twain; Abenteuer; 978-0-14-243717-9
+The Adventures of Tom Sawyer; Mark Twain; Abenteuer; 978-0-14-243720-9
+The Call of the Wild; Jack London; Abenteuer; 978-0-14-243717-9
+White Fang; Jack London; Abenteuer; 978-0-14-243717-9
+The Jungle Book; Rudyard Kipling; Abenteuer; 978-0-14-243717-9
+Treasure Island; Robert Louis Stevenson; Abenteuer; 978-0-14-243717-9
+The Strange Case of Dr Jekyll and Mr Hyde; Robert Louis Stevenson; Horror; 978-0-14-243717-9
+The Time Machine; H.G. Wells; Science Fiction; 978-0-14-243717-9
+The War of the Worlds; H.G. Wells; Science Fiction; 978-0-14-243717-9
+The Invisible Man; H.G. Wells; Science Fiction; 978-0-14-243717-9
+The Island of Doctor Moreau; H.G. Wells; Science Fiction; 978-0-14-243717-9
+The Catcher in the Rye; J.D. Salinger; Klassik; 978-0-14-243717-9
+The Great Gatsby; F. Scott Fitzgerald; Klassik; 978-0-14-243717-9
+To Kill a Mockingbird; Harper Lee; Klassik; 978-0-14-243717-9
+1984; George Orwell; Dystopie; 978-0-14-243717-9
+Animal Farm; George Orwell; Dystopie; 978-0-14-243717-9
+Brave New World; Aldous Huxley; Dystopie; 978-0-14-243717-9
+Fahrenheit 451; Ray Bradbury; Dystopie; 978-0-14-243717-9
+The Handmaid's Tale; Margaret Atwood; Dystopie; 978-0-14-243717-9
+The Road; Cormac McCarthy; Dystopie; 978-0-14-243717-9
+The Hunger Games; Suzanne Collins; Dystopie; 978-0-14-243717-9
+Catching Fire; Suzanne Collins; Dystopie; 978-0-14-243717-9
+Mockingjay; Suzanne Collins; Dystopie; 978-0-14-243717-9
+Divergent; Veronica Roth; Dystopie; 978-0-14-243717-9
+Insurgent; Veronica Roth; Dystopie; 978-0-14-243717-9
+Allegiant; Veronica Roth; Dystopie; 978-0-14-243717-9
+The Maze Runner; James Dashner; Dystopie; 978-0-14-243717-9
+The Scorch Trials; James Dashner; Dystopie; 978-0-14-243717-9
+The Death Cure; James Dashner; Dystopie; 978-0-14-243717-9
+The Hobbit; J.R.R. Tolkien; Fantasy; 978-0-14-243717-9
+The Fellowship of the Ring; J.R.R. Tolkien; Fantasy; 978-0-14-243717-9
+The Two Towers; J.R.R. Tolkien; Fantasy; 978-0-14-243717-9
+The Return of the King; J.R.R. Tolkien; Fantasy; 978-0-14-243717-9
+Harry Potter and the Philosopher's Stone; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Chamber of Secrets; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Prisoner of Azkaban; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Goblet of Fire; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Order of the Phoenix; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Half-Blood Prince; J.K. Rowling; Fantasy; 978-0-14-243717-9
+Harry Potter and the Deathly Hallows; J.K. Rowling; Fantasy; 978-0-14-243717-9
+The Chronicles of Narnia; C.S. Lewis; Fantasy; 978-0-14-243717-9
+The Lion, the Witch and the Wardrobe; C.S. Lewis; Fantasy; 978-0-14-243717-9
+Prince Caspian; C.S. Lewis; Fantasy; 978-0-14-243717-9
+The Voyage of the Dawn Treader; C.S. Lewis; Fantasy; 978-0-14-243717-9

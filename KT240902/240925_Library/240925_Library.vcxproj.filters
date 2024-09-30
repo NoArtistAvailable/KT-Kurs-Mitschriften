@@ -15,13 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="terminal.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="media.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
     <ClCompile Include="user.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="library.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>

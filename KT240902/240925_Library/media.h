@@ -9,11 +9,13 @@ public:
 	std::string title;
 	std::string author;
 	std::vector<std::string> tags;
+	// todo: deconstructor needs to remove assigned vector
 
 	int code;
 	bool CheckRentalStatus();
 
-	virtual std::string ToString();
+	virtual std::string ToString() = 0;
+	// pure virtual -> du kannst media nicht mehr instanzieren (ist abstrakt)
 
 private:
 	time_t timestamp;
@@ -22,16 +24,17 @@ private:
 
 class Book : Media{
 public:
-	std::string bookId;
+	std::string isbn;
 	Book(std::string title, std::string author, std::string bookId);
 	std::string ToString() {
-		return title + " | by " + author + " | " + bookId;
+		return title + " | by " + author + " | " + isbn;
 	}
 };
 
 class CD : Media {
 public:
-	float playLength;
+	std::string ean;
+	std::vector<std::string> titleList;
 	CD(std::string title, std::string author, float playLength);
 	std::string ToString() {
 		return title + " | by " + author;

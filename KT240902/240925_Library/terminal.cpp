@@ -1,9 +1,74 @@
 #include <iostream>
+#include <string>
+//#include "library.h";
+#include<vector>
+using std::string;
+
+
+class Choice {
+public:
+    string prompt;
+private:
+    // this would probably lead us down a functional path,
+    // maybe we want to evaluate Single State Machine approach first
+    void (*action)();
+
+public:
+    // Constructor
+    Choice(const string& p, void (*a)()) : prompt(p), action(a) {}
+
+    void invoke() {
+        if (action) action();
+    }
+};
+
+void printLine(const string& input) {
+    std::cout << input << std::endl;
+}
+
+bool choice(const string& prompt, std::vector<Choice>& choices){
+    printLine(prompt);
+    int count = choices.size(); // casting long long to int
+    //std::cout << choices.size() << std::endl;
+    for (long long i = 0; i < count; i++)
+        printLine("   " + std::to_string(i + 1) + ": " + choices.at(i).prompt);
+    int chosen;
+    std::cin >> chosen;
+    chosen--;   // we want to show the user a choice between 1 and count, instead of between 0 and count - 1 
+    if (chosen < 0 || chosen >= count) return false;
+    choices.at(chosen).invoke();
+    return true;
+}
+
+void sampleFunction() {
+    printLine("this happened");
+}
+
+void sampleFunctionWithParameter(int param) {
+    printLine(std::to_string(param));
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    printLine("Welcome to C++ Library!");
+    // load library
+    //Library library = Library();
+    //library.Init();
+
+    auto secondChoice = []() {sampleFunctionWithParameter(2); };    // we're using a lambda to use parameterized functions
+    // anatomy of a lambda: [] <- capture clause (what variables get captured from the enclosing scope)
+    // anatomy of a lambda: () <- parameters to be used in the lambda function ( eg we could (int count = 2) {print(count);} )
+    // anatomy of a lambda: {} <- function body
+    std::vector<Choice> mainChoice = { 
+        Choice("Medien Suche", sampleFunction), 
+        Choice("Medien Bearbeiten", secondChoice),
+        Choice("Nutzer Bearbeiten", sampleFunction)
+    };
+    while( choice("Select one: ", mainChoice));
+
 }
+
+
 
 /*Projekt Bibliothek
 Projektbeschreibung:
