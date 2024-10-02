@@ -7,9 +7,7 @@
 
 class Library {
 	std::vector<Media*> ownedMedia;
-	// vllt muss das std::vector<Media*> sein <- rauszufinden
 	std::vector<Shelf*> shelves;
-
 	std::vector<User*> customers;
 
 public:

@@ -27,14 +27,10 @@ class Choice {
 public:
     string prompt;
 private:
-    // this would probably lead us down a functional path,
-    // maybe we want to evaluate Single State Machine approach first
     void (*action)();
 
 public:
-    // Constructor
     Choice(const string& p, void (*a)()) : prompt(p), action(a) {}
-
     void invoke() {
         if (action) action();
     }
@@ -73,14 +69,14 @@ void showStateMenu(TerminalState state) {
     case MAIN:
     {
         std::vector<Choice> currentChoice = {
-        Choice("Medien Suche", []() { stateMachine.push(SEARCH); }),
-        Choice("Alle Medien Anzeigen", []() {
-                lib.ShowEveryThing();
-                waitForUserInput();
-            }),
-        Choice("Medien Bearbeiten", []() { stateMachine.push(MEDIA_CHOICE); }),
-        Choice("Nutzer Bearbeiten", []() { stateMachine.push(USER_CHOICE); }),
-        Choice("Beenden", []() { stateMachine.pop(); })
+            Choice("Medien Suche", []() { stateMachine.push(SEARCH); }),
+            Choice("Alle Medien Anzeigen", []() {
+                    lib.ShowEveryThing();
+                    waitForUserInput();
+                }),
+            Choice("Medien Bearbeiten", []() { stateMachine.push(MEDIA_CHOICE); }),
+            Choice("Nutzer Bearbeiten", []() { stateMachine.push(USER_CHOICE); }),
+            Choice("Beenden", []() { stateMachine.pop(); })
         };
         if (!choice("Haupt Menü", currentChoice)) stateMachine.pop();
         break;
@@ -162,7 +158,7 @@ int main()
     // load library
     lib = Library();
     lib.Init();
-    stateMachine.push(MAIN);
+    stateMachine.push(MAIN);    // initial state
     while (!stateMachine.empty()) {
         system("cls");  // clearing console
         TerminalState current = stateMachine.top();
