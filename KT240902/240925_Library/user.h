@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include<vector>
 #include "media.h"
 
 class User {
@@ -13,7 +14,7 @@ public:
 	// 4 Ziffern: zufällig
 	// Prüfziffer
 
-	std::vector<Media*> rented;
+	//std::vector<Media*> rented;	<- das user <-> media verhältnis sollte wahrscheinlich nur in library leben
 
 	User(std::string name, std::string adress, std::string contact);
 };

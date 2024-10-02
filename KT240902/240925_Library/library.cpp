@@ -1,28 +1,44 @@
-//#include "library.h"
-//#include "media.h"
+#include "library.h"
+#include "media.h"
+#include<iostream>
 #include <fstream>
+#include<sstream>
 using std::string;
 
-//void Library::Init() {
-//	ownedMedia = std::vector<Media>();
-//	AddBooksFromDirectory("books.txt");
-//}
-//
-//void Library::AddBooksFromDirectory(const string& path) {
-//	auto newMedia = LoadMediaFromPath(path);
-//	ownedMedia.insert(ownedMedia.end(), newMedia.begin(), newMedia.end());
-//}
+void Library::Init() {
+	AddBooksFromDirectory("books.txt");
+	auto b = Book("r", "g", "b");
+}
 
-//std::vector<Media> Library::LoadMediaFromPath(const string& path) {
-//	auto vec = std::vector<Media>();
-//	std::ifstream fileStream;
-//	fileStream.open(path, std::ios::in);
-//	char buffer[256];
-//	while (!fileStream.eof()) {
-//		fileStream.getline(buffer, sizeof(buffer));
-//		// query for title until we hit first ;
-//		// query for author until we hit second ;
-//		// query for tags until we hit third ;
-//	}
-//	fileStream.close();
-//}
+void Library::ShowEveryThing() {
+	for (const auto& media : ownedMedia) {
+		std::cout << media->ToString() << std::endl;
+	}
+}
+
+void Library::AddBooksFromDirectory(const string& path) {
+	auto newMedia = LoadBooksFromPath(path);
+	ownedMedia.insert(ownedMedia.end(), newMedia.begin(), newMedia.end());
+}
+
+std::vector<Book*> Library::LoadBooksFromPath(const string& path){
+	auto vec = std::vector<Book*>();
+	std::ifstream fileStream;
+	fileStream.open(path, std::ios::in);
+	
+	std::string line;
+
+	while (std::getline(fileStream, line)) {
+		std::stringstream ss(line);
+		std::string title, author, category;
+
+		if (!std::getline(ss, title, ';')) continue;
+		if (!std::getline(ss, author, ';')) continue;
+		if (!std::getline(ss, category, ';')) continue;
+
+		Book* b = new Book(title, author, category);
+		vec.push_back(b);
+	}
+	fileStream.close();
+	return vec;
+}
