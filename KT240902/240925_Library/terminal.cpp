@@ -1,9 +1,27 @@
 #include <iostream>
 #include <string>
-//#include "library.h";
+#include "library.h";
 #include<vector>
+#include<stack>
+#include<Windows.h>
+#include <cstdlib> // required for system and clear
 using std::string;
 
+enum TerminalState {
+    MAIN = 0, 
+    SEARCH = 1,
+
+    MEDIA_CHOICE = 2, 
+    MEDIA_ADD = 3, 
+    MEDIA_REMOVE = 4, 
+
+    USER_CHOICE = 5, 
+    USER_ADD = 6, 
+    USER_REMOVE = 7
+};
+
+std::stack<TerminalState> stateMachine;
+Library lib;
 
 class Choice {
 public:
@@ -26,6 +44,16 @@ void printLine(const string& input) {
     std::cout << input << std::endl;
 }
 
+void waitForUserInput() {
+    char unread;
+    std::cin >> unread;
+}
+
+void notImplementedLine() {
+    std::cout << "nicht implementiert" << std::endl;
+    waitForUserInput();
+}
+
 bool choice(const string& prompt, std::vector<Choice>& choices){
     printLine(prompt);
     int count = choices.size(); // casting long long to int
@@ -40,32 +68,106 @@ bool choice(const string& prompt, std::vector<Choice>& choices){
     return true;
 }
 
-void sampleFunction() {
-    printLine("this happened");
-}
-
-void sampleFunctionWithParameter(int param) {
-    printLine(std::to_string(param));
+void showStateMenu(TerminalState state) {
+    switch (state) {
+    case MAIN:
+    {
+        std::vector<Choice> currentChoice = {
+        Choice("Medien Suche", []() { stateMachine.push(SEARCH); }),
+        Choice("Alle Medien Anzeigen", []() {
+                lib.ShowEveryThing();
+                waitForUserInput();
+            }),
+        Choice("Medien Bearbeiten", []() { stateMachine.push(MEDIA_CHOICE); }),
+        Choice("Nutzer Bearbeiten", []() { stateMachine.push(USER_CHOICE); }),
+        Choice("Beenden", []() { stateMachine.pop(); })
+        };
+        if (!choice("Haupt Menü", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case SEARCH:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Such Eingabe nicht implementiert", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Medien Suche", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case MEDIA_CHOICE:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Medien Hinzufügen", []() {stateMachine.push(MEDIA_ADD); }),
+            Choice("Medien Entfernen", []() {stateMachine.push(MEDIA_REMOVE); }),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Medien Menü", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case MEDIA_ADD:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Buch Hinzufügen nicht implementiert", notImplementedLine),
+            Choice("CD Hinzufügen nicht implementiert", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Medien Hinzufügen", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case MEDIA_REMOVE:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Medium Entfernen nicht implementiert", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Medien Entfernen", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case USER_CHOICE:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Nutzer Hinzufügen", notImplementedLine),
+            Choice("Nutzer Entfernen", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Nutzer Menü", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case USER_ADD:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Nutzer Hinzufügen nicht implementiert", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Nutzer Hinzufügen", currentChoice)) stateMachine.pop();
+        break;
+    }
+    case USER_REMOVE:
+    {
+        std::vector<Choice> currentChoice = {
+            Choice("Nutzer Entfernen nicht implementiert", notImplementedLine),
+            Choice("Zurück", []() {stateMachine.pop(); })
+        };
+        if (!choice("Nutzer Entfernen", currentChoice)) stateMachine.pop();
+        break;
+    }
+    }   // END OF SWITCH
 }
 
 int main()
 {
+    SetConsoleOutputCP(1252);
+    setlocale(LC_ALL, "de_DE");
     printLine("Welcome to C++ Library!");
     // load library
-    //Library library = Library();
-    //library.Init();
-
-    auto secondChoice = []() {sampleFunctionWithParameter(2); };    // we're using a lambda to use parameterized functions
-    // anatomy of a lambda: [] <- capture clause (what variables get captured from the enclosing scope)
-    // anatomy of a lambda: () <- parameters to be used in the lambda function ( eg we could (int count = 2) {print(count);} )
-    // anatomy of a lambda: {} <- function body
-    std::vector<Choice> mainChoice = { 
-        Choice("Medien Suche", sampleFunction), 
-        Choice("Medien Bearbeiten", secondChoice),
-        Choice("Nutzer Bearbeiten", sampleFunction)
-    };
-    while( choice("Select one: ", mainChoice));
-
+    lib = Library();
+    lib.Init();
+    stateMachine.push(MAIN);
+    while (!stateMachine.empty()) {
+        system("cls");  // clearing console
+        TerminalState current = stateMachine.top();
+        showStateMenu(current);
+    }
 }
 
 
