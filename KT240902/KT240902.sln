@@ -45,6 +45,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241001_Inheritance", "24100
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241004_Namespaces", "241004_Namespaces\241004_Namespaces.vcxproj", "{41628E88-65E0-49DA-BB43-084DA08630FA}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241004_GoogleTest", "241004_GoogleTest\241004_GoogleTest.vcxproj", "{585304C5-8F21-4E64-9F95-FABB244CBF7A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -221,6 +223,14 @@ Global
 		{41628E88-65E0-49DA-BB43-084DA08630FA}.Release|x64.Build.0 = Release|x64
 		{41628E88-65E0-49DA-BB43-084DA08630FA}.Release|x86.ActiveCfg = Release|Win32
 		{41628E88-65E0-49DA-BB43-084DA08630FA}.Release|x86.Build.0 = Release|Win32
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Debug|x64.ActiveCfg = Debug|x64
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Debug|x64.Build.0 = Debug|x64
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Debug|x86.ActiveCfg = Debug|Win32
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Debug|x86.Build.0 = Debug|Win32
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Release|x64.ActiveCfg = Release|x64
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Release|x64.Build.0 = Release|x64
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Release|x86.ActiveCfg = Release|Win32
+		{585304C5-8F21-4E64-9F95-FABB244CBF7A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
