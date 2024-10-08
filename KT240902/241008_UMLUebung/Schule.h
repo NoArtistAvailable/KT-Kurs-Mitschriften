@@ -13,6 +13,11 @@ public:
 	//std::vector<SchulKlasse*> klassen;
 	std::vector<Lehrer*> lehrer;
 	std::vector<Schueler*> schueler;
+
+	~Schule() {
+		for (auto l : lehrer) delete l;
+		for (auto s : schueler) delete s;
+	}
 };
 
 class SchulKlasse {
