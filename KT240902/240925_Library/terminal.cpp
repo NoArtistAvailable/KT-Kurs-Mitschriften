@@ -45,15 +45,15 @@ void waitForUserInput() {
     std::cin >> unread;
 }
 
-void notImplementedLine() {
+void showNotImplemented() {
     std::cout << "nicht implementiert" << std::endl;
     waitForUserInput();
 }
 
-bool choice(const string& prompt, std::vector<Choice>& choices){
+bool showChoice(const string& prompt, std::vector<Choice>& choices){
     printLine(prompt);
     int count = choices.size(); // casting long long to int
-    //std::cout << choices.size() << std::endl;
+
     for (long long i = 0; i < count; i++)
         printLine("   " + std::to_string(i + 1) + ": " + choices.at(i).prompt);
     int chosen;
@@ -78,16 +78,16 @@ void showStateMenu(TerminalState state) {
             Choice("Nutzer Bearbeiten", []() { stateMachine.push(USER_CHOICE); }),
             Choice("Beenden", []() { stateMachine.pop(); })
         };
-        if (!choice("Haupt Menü", currentChoice)) stateMachine.pop();
+        if (!showChoice("Haupt Menü", currentChoice)) stateMachine.pop();
         break;
     }
     case SEARCH:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Such Eingabe nicht implementiert", notImplementedLine),
+            Choice("Such Eingabe nicht implementiert", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Medien Suche", currentChoice)) stateMachine.pop();
+        if (!showChoice("Medien Suche", currentChoice)) stateMachine.pop();
         break;
     }
     case MEDIA_CHOICE:
@@ -97,54 +97,54 @@ void showStateMenu(TerminalState state) {
             Choice("Medien Entfernen", []() {stateMachine.push(MEDIA_REMOVE); }),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Medien Menü", currentChoice)) stateMachine.pop();
+        if (!showChoice("Medien Menü", currentChoice)) stateMachine.pop();
         break;
     }
     case MEDIA_ADD:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Buch Hinzufügen nicht implementiert", notImplementedLine),
-            Choice("CD Hinzufügen nicht implementiert", notImplementedLine),
+            Choice("Buch Hinzufügen nicht implementiert", showNotImplemented),
+            Choice("CD Hinzufügen nicht implementiert", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Medien Hinzufügen", currentChoice)) stateMachine.pop();
+        if (!showChoice("Medien Hinzufügen", currentChoice)) stateMachine.pop();
         break;
     }
     case MEDIA_REMOVE:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Medium Entfernen nicht implementiert", notImplementedLine),
+            Choice("Medium Entfernen nicht implementiert", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Medien Entfernen", currentChoice)) stateMachine.pop();
+        if (!showChoice("Medien Entfernen", currentChoice)) stateMachine.pop();
         break;
     }
     case USER_CHOICE:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Nutzer Hinzufügen", notImplementedLine),
-            Choice("Nutzer Entfernen", notImplementedLine),
+            Choice("Nutzer Hinzufügen", showNotImplemented),
+            Choice("Nutzer Entfernen", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Nutzer Menü", currentChoice)) stateMachine.pop();
+        if (!showChoice("Nutzer Menü", currentChoice)) stateMachine.pop();
         break;
     }
     case USER_ADD:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Nutzer Hinzufügen nicht implementiert", notImplementedLine),
+            Choice("Nutzer Hinzufügen nicht implementiert", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Nutzer Hinzufügen", currentChoice)) stateMachine.pop();
+        if (!showChoice("Nutzer Hinzufügen", currentChoice)) stateMachine.pop();
         break;
     }
     case USER_REMOVE:
     {
         std::vector<Choice> currentChoice = {
-            Choice("Nutzer Entfernen nicht implementiert", notImplementedLine),
+            Choice("Nutzer Entfernen nicht implementiert", showNotImplemented),
             Choice("Zurück", []() {stateMachine.pop(); })
         };
-        if (!choice("Nutzer Entfernen", currentChoice)) stateMachine.pop();
+        if (!showChoice("Nutzer Entfernen", currentChoice)) stateMachine.pop();
         break;
     }
     }   // END OF SWITCH
@@ -154,11 +154,13 @@ int main()
 {
     SetConsoleOutputCP(1252);
     setlocale(LC_ALL, "de_DE");
+
     printLine("Welcome to C++ Library!");
     // load library
     lib = Library();
     lib.Init();
     stateMachine.push(MAIN);    // initial state
+
     while (!stateMachine.empty()) {
         system("cls");  // clearing console
         TerminalState current = stateMachine.top();
