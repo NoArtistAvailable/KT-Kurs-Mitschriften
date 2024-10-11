@@ -55,9 +55,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241008_UMLUebung", "241008_
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241010_Lambda Tutorium", "241010_Lambda Tutorium\241010_Lambda Tutorium.vcxproj", "{CF06EA58-5A03-4250-A501-320785814A7E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241010_Algorithm Tutorium", "241010_Template Tutorium\241010_Template Tutorium.vcxproj", "{36B92941-5D92-4CF7-8BB9-D063C0F31418}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241010_Templates Tutorium", "241010_Templates Tutorium\241010_Templates Tutorium.vcxproj", "{B2EC7A30-8F3D-4EC6-A269-C7AFAAABEE7E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241011_Template Ueberladung", "241011_Template Ueberladung\241011_Template Ueberladung.vcxproj", "{A2CC3636-1CC0-46FB-B81F-D194E7395250}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -291,6 +291,14 @@ Global
 		{B2EC7A30-8F3D-4EC6-A269-C7AFAAABEE7E}.Release|x64.Build.0 = Release|x64
 		{B2EC7A30-8F3D-4EC6-A269-C7AFAAABEE7E}.Release|x86.ActiveCfg = Release|Win32
 		{B2EC7A30-8F3D-4EC6-A269-C7AFAAABEE7E}.Release|x86.Build.0 = Release|Win32
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Debug|x64.ActiveCfg = Debug|x64
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Debug|x64.Build.0 = Debug|x64
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Debug|x86.ActiveCfg = Debug|Win32
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Debug|x86.Build.0 = Debug|Win32
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Release|x64.ActiveCfg = Release|x64
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Release|x64.Build.0 = Release|x64
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Release|x86.ActiveCfg = Release|Win32
+		{A2CC3636-1CC0-46FB-B81F-D194E7395250}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
