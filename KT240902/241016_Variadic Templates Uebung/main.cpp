@@ -48,8 +48,8 @@ int mult(Args...args) {
 
 // UEBUNG 7
 template<typename... Args>
-int averageOf(Args... args) {
-    int sum = (args + ...);
+double averageOf(Args... args) {
+    double sum = (args + ...);
     int count = sizeof...(args);
     return sum / count;
 }
@@ -72,7 +72,7 @@ int main() {
     std::cout << std::get<2>(tuple) << std::endl;
 
     std::cout << "MULT: " << mult(3.2, 4, 6, 0.2) << std::endl;
-    std::cout << "AVERAGE: " << averageOf(3, 5, 6, 1, -20, -1000);
+    std::cout << "AVERAGE: " << averageOf(3.0, 5.1, 6.333, 1.0, -20, -1000.36);
 
     return 0;
 }
