@@ -17,7 +17,9 @@ int main()
     std::cout << "Flaecheninhalt: " << kreis.CalculateSurface() << std::endl;
     std::cout << "Umfang: " << kreis.CalculateCircumference() << std::endl;
 
-    std::cout << "Logge Kreis: " << kreis;
+    std::cout << "Logge Kreis: " << kreis << std::endl;
 
+    kreis = kreis << Kreis(1, 1, 0.1);
+    std::cout << kreis << std::endl;
 }
 

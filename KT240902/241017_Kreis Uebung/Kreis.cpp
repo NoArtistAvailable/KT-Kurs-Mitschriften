@@ -20,3 +20,11 @@ std::ostream& operator<<(std::ostream& stream, const Kreis& kreis) {
 	stream << "Kreis (" << kreis.position.x << ", " << kreis.position.y << ") radius: " << kreis.radius << " ";
 	return stream;
 }
+
+Kreis operator<<(const Kreis& a, const Kreis& b) {
+	return Kreis(
+		a.position.x + b.position.x + b.radius,
+		a.position.y + b.position.y + b.radius,
+		a.radius
+	);
+}
