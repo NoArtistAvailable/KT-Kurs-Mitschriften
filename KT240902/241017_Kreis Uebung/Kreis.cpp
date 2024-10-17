@@ -18,4 +18,5 @@ bool Kreis::CheckIfInside(Punkt p) {
 
 std::ostream& operator<<(std::ostream& stream, const Kreis& kreis) {
 	stream << "Kreis (" << kreis.position.x << ", " << kreis.position.y << ") radius: " << kreis.radius << " ";
+	return stream;
 }
