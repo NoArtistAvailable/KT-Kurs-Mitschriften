@@ -63,6 +63,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241014_Einkaufs Uebung", "2
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241016_Variadic Templates Uebung", "241016_Variadic Templates Uebung\241016_Variadic Templates Uebung.vcxproj", "{97D07EDD-7715-49E6-8C9A-20A89CD2B6E4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "241017_Kreis Uebung", "241017_Kreis Uebung\241017_Kreis Uebung.vcxproj", "{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -311,6 +313,14 @@ Global
 		{97D07EDD-7715-49E6-8C9A-20A89CD2B6E4}.Release|x64.Build.0 = Release|x64
 		{97D07EDD-7715-49E6-8C9A-20A89CD2B6E4}.Release|x86.ActiveCfg = Release|Win32
 		{97D07EDD-7715-49E6-8C9A-20A89CD2B6E4}.Release|x86.Build.0 = Release|Win32
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Debug|x64.ActiveCfg = Debug|x64
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Debug|x64.Build.0 = Debug|x64
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Debug|x86.ActiveCfg = Debug|Win32
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Debug|x86.Build.0 = Debug|Win32
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Release|x64.ActiveCfg = Release|x64
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Release|x64.Build.0 = Release|x64
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Release|x86.ActiveCfg = Release|Win32
+		{7D28EC20-67A7-4FBC-893F-9ED7AD28D45F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
