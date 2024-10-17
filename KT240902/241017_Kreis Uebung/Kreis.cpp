@@ -11,9 +11,7 @@ double Kreis::CalculateCircumference() const {
 }
 
 bool Kreis::CheckIfInside(Punkt p) const {
-	double distanceX = abs( p.x - position.x);
-	double distanceY = abs( p.y - position.y);
-	return (distanceX + distanceY) < radius;
+	return position.GetDistanceTo(p) < radius;
 }
 
 std::ostream& operator<<(std::ostream& stream, const Kreis& kreis) {
