@@ -1,4 +1,5 @@
 #include "Kreis.h"
+#include<string>
 
 const double PI = 3.14159;
 
@@ -25,4 +26,8 @@ Kreis operator<<(const Kreis& a, const Kreis& b) {
 		a.position.y + b.position.y + b.radius,
 		a.radius
 	);
+}
+
+std::string toString(const Kreis& kreis) {
+	return "Kreis (" + std::to_string(kreis.position.x) + ", " + std::to_string(kreis.position.y) + ") radius: " + std::to_string(kreis.radius);
 }

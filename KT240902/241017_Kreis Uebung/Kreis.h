@@ -35,4 +35,5 @@ public:
 
 	friend std::ostream& operator<< (std::ostream & stream, const Kreis & kreis);
 	friend Kreis operator<<(const Kreis& a, const Kreis& b);
+	friend std::string toString(const Kreis& kreis);
 };
