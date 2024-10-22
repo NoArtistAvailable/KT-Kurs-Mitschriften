@@ -8,7 +8,7 @@ public:
 	double GetDistanceTo(const Punkt& other) const {
 		return sqrt(pow(x - other.x, 2) + pow(y - other.y, 2));
 	};
-	Punkt operator+(Punkt other) {
+	Punkt operator+(const Punkt& other) {
 		return Punkt(x + other.x, y + other.y);
 	}
 	friend std::istream& operator>>(std::istream& stream, Punkt& p);
