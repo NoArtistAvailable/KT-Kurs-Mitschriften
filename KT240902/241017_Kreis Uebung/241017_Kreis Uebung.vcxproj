@@ -130,6 +130,7 @@
   <ItemGroup>
     <ClCompile Include="Kreis.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Punkt.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Kreis.h" />

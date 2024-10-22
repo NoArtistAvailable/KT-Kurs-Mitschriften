@@ -21,5 +21,10 @@ int main()
 
     kreis = kreis << Kreis(1, 1, 0.1);
     std::cout << kreis << std::endl;
+
+    std::cout << "schaffe einen neuen punkt:" << std::endl;
+    Punkt p;
+    std::cin >> p;
+    std::cout << "dein eingebener punkt: " << p << std::endl;
 }
 
